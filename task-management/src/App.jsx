@@ -1,20 +1,21 @@
 import './App.css'
 import TaskDetail from './components/TaskDetail'
 import TaskList from './components/TaskList'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
 
 
   return (
 
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/:id" element={<TaskDetail />} />
+        <Route path="/" element={<TaskList />} />
+        <Route path="/task/:taskId" element={<TaskDetail />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
 
-  )
+  );
 }
 
 export default App
